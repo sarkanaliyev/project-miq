@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/monuments",
+      "handler": "monument.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/monuments/count",
+      "handler": "monument.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/monuments/:id",
+      "handler": "monument.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/monuments",
+      "handler": "monument.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/monuments/:id",
+      "handler": "monument.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/monuments/:id",
+      "handler": "monument.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

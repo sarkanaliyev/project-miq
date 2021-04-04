@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "monuments",
+  "info": {
+    "name": "monument",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "district": {
+      "model": "district",
+      "via": "monuments"
+    },
+    "before_occupation": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "during_occupation": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "after_occupation": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "category": {
+      "model": "category",
+      "via": "monuments"
+    },
+    "importance": {
+      "model": "importance",
+      "via": "monuments"
+    },
+    "type": {
+      "model": "type",
+      "via": "monuments"
+    },
+    "address": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    }
+  }
+}
