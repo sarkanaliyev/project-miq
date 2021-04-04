@@ -5,7 +5,8 @@
     "commonjs": true,
     "es6": true,
     "node": true,
-    "browser": false
+    "browser": false,
+    "HEROKU_URL": "http://obscure-stream-64285.herokuapp.com/"
   },
   "parserOptions": {
     "ecmaFeatures": {
