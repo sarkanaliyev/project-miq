@@ -1,7 +1,17 @@
 version: "3.9"
 services:
   backend:
-    build: .
+    image: strapi/strapi
+    restart: unless-stopped
+    environment:
+      DATABASE_CLIENT: postgres
+      DATABASE_NAME: project_miq
+      DATABASE_HOST: pgdb
+      DATABASE_PORT: 5432
+      DATABASE_USERNAME: miq
+      DATABASE_PASSWORD: zft3cMAZZR!o
+    volumes:
+      - ./:/srv/app
     ports:
       - "1337:1337"
     links:
