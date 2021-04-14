@@ -1,14 +1,27 @@
+const parse = require("pg-connection-string").parse;
+const {
+  DATABASE_NAME,
+  DATABASE_HOST,
+  DATABASE_PORT,
+  DATABASE_USERNAME,
+  DATABASE_PASSWORD,
+} = process.env;
+
 module.exports = ({ env }) => ({
-  defaultConnection: 'default',
+  defaultConnection: "default",
   connections: {
     default: {
-      connector: 'bookshelf',
+      connector: "bookshelf",
       settings: {
-        client: 'sqlite',
-        filename: env('DATABASE_FILENAME', '.tmp/data.db'),
+        client: "postgres",
+        host: DATABASE_HOST,
+        port: DATABASE_PORT,
+        database: DATABASE_NAME,
+        username: DATABASE_USERNAME,
+        password: DATABASE_PASSWORD,
       },
       options: {
-        useNullAsDefault: true,
+        autoMigration: true,
       },
     },
   },
