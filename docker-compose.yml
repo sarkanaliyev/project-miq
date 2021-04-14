@@ -5,9 +5,9 @@ services:
     ports:
       - "1337:1337"
     links:
-      - db
+      - pgdb
     depends_on:
-      - db
+      - pgdb
   pgdb:
     image: postgres
     restart: always
