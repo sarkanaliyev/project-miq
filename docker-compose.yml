@@ -12,7 +12,7 @@ services:
     image: postgres
     restart: always
     volumes:
-      - project_miq_data:/var/lib/postgresql/data
+      - /project_miq_data:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: zft3cMAZZR!o
       POSTGRES_USER: miq
