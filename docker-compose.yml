@@ -16,7 +16,6 @@ services:
       - "1337:1337"
     links:
       - pgdb
-      - front
     depends_on:
       - pgdb
   pgdb:
