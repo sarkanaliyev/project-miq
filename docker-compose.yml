@@ -11,7 +11,7 @@ services:
       DATABASE_USERNAME: miq
       DATABASE_PASSWORD: zft3cMAZZR!o
     volumes:
-      - ./strapi_starter:/srv/app
+      - ./project-miq:/srv/app
     ports:
       - "1337:1337"
     links:
@@ -36,7 +36,7 @@ services:
       - 8080:8080
 
   front:
-    build: ./next-starpi_learning
+    build: ./next-netlify
     restart: always
     ports:
       - 3000:3000
